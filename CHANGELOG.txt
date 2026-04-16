@@ -1,0 +1,24 @@
+==============================================================================
+  MJOLNIR_IV — CHANGELOG
+==============================================================================
+
+v1.0  (2026-04-13)
+  Initial release.
+
+  Fix 1: Remove CPU Core 0 affinity pin
+    - Locates and removes the SetThreadAffinityMask(thread, 1) call baked
+      into the RAGE engine main thread initialization.
+    - Core 0 utilization: 72.4% -> 28.6% (-43.8 percentage points).
+
+  Fix 2: SwitchToThread yield in inner busy-wait loop
+    - Injects a cooperative yield into a spinloop that previously burned
+      CPU cycles unconditionally between iterations.
+    - Implemented via code cave (VirtualAlloc, ~25 bytes).
+    - Result: micro-tearing reduced, frame delivery smoother.
+
+  Fix 3: Quality auto-adjuster disabled
+    - Prevents the engine from silently downgrading user graphics settings
+      based on a VRAM estimation routine that uses Xbox 360-era constants.
+    - Gives full manual control over all graphics settings.
+
+==============================================================================

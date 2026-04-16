@@ -1,0 +1,17 @@
+==============================================================================
+  MJOLNIR_IV — CREDITS
+==============================================================================
+
+Research & Development
+  llamacomma (me) :D
+
+Acknowledgements
+  ThirteenAG — FusionFix, without which GTA IV on PC would be far less
+    playable. Audited as prior art; zero overlap with Mjolnir patches.
+  CookiePLMonster — SilentPatch series, the benchmark for what this work
+    aspires to be.
+  The GTA IV modding community at GTAForums — 17 years of collective
+    knowledge that made the research landscape navigable and honestly gave
+    hope whenever running into a wall. Thank you.
+
+==============================================================================

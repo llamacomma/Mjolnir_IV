@@ -1,0 +1,24 @@
+==============================================================================
+  MJOLNIR_IV — SHA256 CHECKSUMS
+==============================================================================
+
+Vanilla\dinput8.dll
+  75E4EBA7B187D666FC1F0B94411B5981402F7C1695B2AA696E8CF294C4C2B3A4
+
+Ultimate ASI Loader\Mjolnir_IV.asi
+  75E4EBA7B187D666FC1F0B94411B5981402F7C1695B2AA696E8CF294C4C2B3A4
+
+  (Both files are identical binaries — same hash is expected.)
+
+GTAIV.exe (target binary — Complete Edition, Steam)
+  08759A5516F9837920EA504436236BBAB89D0826A8E4D04FF106345177B5345D
+
+To verify on Windows (PowerShell):
+  Get-FileHash Vanilla\dinput8.dll -Algorithm SHA256
+  Get-FileHash "Ultimate ASI Loader\Mjolnir_IV.asi" -Algorithm SHA256
+
+To verify on Linux/Mac:
+  sha256sum Vanilla/dinput8.dll
+  sha256sum "Ultimate ASI Loader/Mjolnir_IV.asi"
+
+==============================================================================
