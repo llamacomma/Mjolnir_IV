@@ -1,0 +1,53 @@
+==============================================================================
+  MJOLNIR_IV — COMPATIBILITY
+==============================================================================
+
+TESTED VERSIONS
+--------------------
+  Game version:   GTA IV Complete Edition, Steam
+  Exe build:      1.2.0.59 (patch applied via March 2020 Steam update)
+  Exe SHA256:     08759A5516F9837920EA504436236BBAB89D0826A8E4D04FF106345177B5345D
+
+COMPATIBLE MODS
+---------------
+  Ultimate ASI Loader (ThirteenAG) — fully compatible via the .asi method.
+    UAL ships as dinput8.dll, so use Mjolnir_IV.asi (from the
+    "Ultimate ASI Loader" folder) to avoid a dinput8.dll conflict.
+
+  Any mod that does NOT ship its own dinput8.dll is compatible with
+  the Vanilla installation method.
+
+INSTALLATION METHODS
+--------------------
+  This release ships two variants:
+
+  Vanilla (dinput8.dll) — standalone proxy. Use when no ASI loader is
+    present. The DLL proxies DirectInput8 calls to the system DLL and
+    applies patches at load time.
+
+  Ultimate ASI Loader (Mjolnir_IV.asi) — plugin for Ultimate ASI Loader.
+    Use when you already have UAL installed. The ASI loader calls
+    LoadLibrary on the .asi file, patches apply at load time. No proxy
+    forwarding needed.
+
+  Both variants contain identical patch logic. Do NOT install both at
+  the same time.
+
+NOT TESTED
+----------
+  - Pre-CE exe builds (1.0.4.0, 1.0.6.0, 1.0.7.0, 1.0.8.0)
+    Patch addresses are CE-specific. The DLL verifies byte sequences
+    before patching and will abort cleanly if the exe version is wrong.
+    Check mjolnir_cpu_fix.log for a FAILED or FATAL entry.
+
+  - GFWL (Games for Windows Live) builds
+  - Rockstar Games Launcher standalone (non-Steam)
+  - Wine / Proton (Linux)
+
+KNOWN CONFLICTS
+---------------
+  Any mod that ships its own dinput8.dll (e.g. Ultimate ASI Loader,
+  gta4-rtx) will conflict with the Vanilla dinput8.dll install. Use
+  the Mjolnir_IV.asi option instead.
+
+==============================================================================
