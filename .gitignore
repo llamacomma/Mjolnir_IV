@@ -1,0 +1,48 @@
+# Build artifacts
+fix_template/build/
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Pre-built binaries (exclude build output, include release folder)
+*.dll
+*.asi
+!Mjolnir_IV_1.0/Vanilla/dinput8.dll
+!Mjolnir_IV_1.0/FusionFix/Mjolnir_IV.asi
+
+# Ghidra installation (not project files)
+ghidra_10.2.2_PUBLIC/
+
+# Ghidra project database
+Mjolnir Ghidra/
+
+# Game executables
+Unpacks/
+
+# Analysis output (55MB+ JSONL, decompiled code)
+Source/analysis_output/
+
+# Internal project notes
+CLAUDE.md
+WORKFLOW.md
+
+# Proprietary (never push)
+pipeline/
+ghidra_scripts/
+fix_template/
+game_config/
+Source/
+
+# Debugged function analysis
+DebuggedFunctions/
+
+# Logs
+*.log
+
+# Editor
+.vs/
+.vscode/
+*.suo
+*.user
